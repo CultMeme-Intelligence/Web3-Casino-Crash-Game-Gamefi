@@ -28,6 +28,13 @@ import SettingModal from "views/main/modals/SettingModal";
 import FairModal from "views/main/modals/FairModal";
 import { getCurrencies } from "redux/actions/payment";
 import PrivacyModal from "views/main/modals/PrivacyModal";
+import { keyframes } from "@mui/system";
+
+const logoPulse = keyframes`
+  0% { transform: scale(1); filter: drop-shadow(0 0 0 #14f195); }
+  50% { transform: scale(1.08); filter: drop-shadow(0 0 12px #14f195); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0 #14f195); }
+`;
 
 const useStyles = makeStyles(() => ({
     MainHeaderBox: {
@@ -37,8 +44,10 @@ const useStyles = makeStyles(() => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         position: 'fixed',
-        background: '#1f1e25',
+        background: 'rgba(32,32,64,0.85)',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
         zIndex: '10',
+        backdropFilter: 'blur(8px)',
         "@media (max-width: 681px)": {
             padding: '8px 14px'
         }
@@ -50,6 +59,15 @@ const useStyles = makeStyles(() => ({
         gap: '21px'
     },
     LogoIcon: {
+        animation: `${logoPulse} 2.5s infinite`,
+        width: '64px',
+        height: '64px',
+        cursor: 'pointer',
+        transition: 'transform 0.3s',
+        '&:hover': {
+            transform: 'scale(1.12) rotate(-3deg)',
+            filter: 'drop-shadow(0 0 24px #9945ff)'
+        },
         "@media (max-width: 1024px)": {
             display: 'none'
         }

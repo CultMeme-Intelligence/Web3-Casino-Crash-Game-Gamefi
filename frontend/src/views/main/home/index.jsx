@@ -12,7 +12,8 @@ import BonusesCard from "./BonusCard";
 const useStyles = makeStyles(() => ({
     RootContainer: {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        background: 'none',
     },
     CarouselBox: {
         width: '100%',
@@ -22,7 +23,7 @@ const useStyles = makeStyles(() => ({
         }
     },
     BannerBox: {
-        backgroundImage: 'url(/assets/images/banner-bg.png)',
+        background: 'linear-gradient(135deg, #9945ff 0%, #14f195 100%)',
         backgroundPosition: '26% 50%',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -32,6 +33,12 @@ const useStyles = makeStyles(() => ({
         width: '100%',
         position: 'relative',
         overflow: 'hidden',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+        transition: 'box-shadow 0.3s, transform 0.2s',
+        '&:hover': {
+            boxShadow: '0 16px 48px 0 #14f19599',
+            transform: 'scale(1.01)'
+        },
         "@media (max-width: 681px)": {
             height: '184px',
             borderRadius: '10px'

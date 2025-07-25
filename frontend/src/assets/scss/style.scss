@@ -1,5 +1,34 @@
 body {
-    background-color: #1F1E25 !important;
+    background: linear-gradient(135deg, #181825 0%, #232347 100%) !important;
+    min-height: 100vh;
+    font-family: 'Montserrat', 'Styrene A Web', sans-serif;
+    color: #c7fffa;
+    transition: background 0.5s;
+}
+
+.glass {
+    background: rgba(32, 32, 64, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+button, .MuiButton-root {
+    background: linear-gradient(90deg, #9945ff 0%, #14f195 100%);
+    color: #181825;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: box-shadow 0.3s, transform 0.2s, background 0.3s;
+    box-shadow: 0 2px 8px rgba(20,241,149,0.15);
+}
+button:hover, .MuiButton-root:hover {
+    background: linear-gradient(90deg, #14f195 0%, #00bbff 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(153,69,255,0.25);
 }
 
 span,
@@ -41,7 +70,19 @@ input[type=number] {
 }
 
 .MuiPaper-root {
-    background-color: #1f1e25 !important
+    background: rgba(32, 32, 64, 0.85) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+}
+
+input, .MuiInputBase-root {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    color: #c7fffa;
+    transition: background 0.3s;
+}
+input:focus, .MuiInputBase-root:focus {
+    background: rgba(255,255,255,0.15);
 }
 
 .CustomScroll::-webkit-scrollbar {
@@ -53,8 +94,8 @@ input[type=number] {
 }
 
 .CustomScroll::-webkit-scrollbar-thumb {
-    background: linear-gradient(48.57deg, #5A45D1 24.42%, #BA6AFF 88.19%);
-    border-radius: 2px;
+    background: linear-gradient(135deg, #9945ff 0%, #14f195 100%);
+    border-radius: 8px;
     width: 4px;
 }
 
