@@ -26,19 +26,23 @@ import { useToasts } from "react-toast-notifications";
 
 const useStyles = makeStyles(() => ({
     MenuBox: {
-        padding: '10px 8px'
+        padding: '10px 8px',
+        background: 'rgba(32,32,64,0.85)',
+        borderRadius: '16px',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+        backdropFilter: 'blur(8px)',
     },
     MenuOpen: {
         width: '269px',
         padding: '0px 50px 0px 50px',
         flex: 'none',
         position: 'relative',
-        "@media (max-width: 940px)": {
-            display: 'none'
-        }
+        '@media (max-width: 940px)': {
+            display: 'none',
+        },
     },
     MenuClose: {
-        width: '60px'
+        width: '60px',
     },
     MenuItems: {
         listStyle: 'none',
@@ -46,35 +50,42 @@ const useStyles = makeStyles(() => ({
         flexDirection: 'column',
         padding: '0px',
         margin: '0px',
-        "&>li:last-child": {
-            marginBottom: '0px'
-        }
+        '&>li:last-child': {
+            marginBottom: '0px',
+        },
     },
     BonusBox: {
         height: '60px',
         display: 'flex',
         alignItems: 'center',
-        background: '#1a2c38',
+        background: 'linear-gradient(90deg, #9945ff 0%, #14f195 100%)',
         marginBottom: '8px',
-        borderRadius: '5px',
-        padding: '5px 5px'
+        borderRadius: '8px',
+        padding: '5px 5px',
+        boxShadow: '0 2px 8px rgba(20,241,149,0.15)',
     },
     MenuItem: {
-        background: 'transparent',
-        color: 'rgb(93, 175, 255)',
+        background: 'rgba(255,255,255,0.04)',
+        color: '#14f195',
         marginBottom: '10px',
         display: 'flex',
         alignItems: 'center',
         width: '100%',
         height: '43px',
-        border: '1px solid #363646',
+        border: '1px solid #9945ff',
         borderRadius: '8px',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        transition: 'background 0.3s, box-shadow 0.3s, color 0.3s',
+        '&:hover': {
+            background: 'linear-gradient(90deg, #9945ff 0%, #14f195 100%)',
+            color: '#181825',
+            boxShadow: '0 4px 16px #14f19555',
+        },
     },
     MenuItemLink: {
-        fontFamily: "'Cera Pro'",
+        fontFamily: "'Montserrat', 'Cera Pro', sans-serif",
         fontStyle: "normal",
-        fontWeight: 400,
+        fontWeight: 500,
         fontSize: "15px",
         lineHeight: "19px",
         color: "#FFFFFF",
@@ -83,24 +94,25 @@ const useStyles = makeStyles(() => ({
         alignItems: 'center',
         width: '100%',
         position: 'relative',
-        "&>span": {
-            fontFamily: "'Cera Pro'",
+        '&>span': {
+            fontFamily: "'Montserrat', 'Cera Pro', sans-serif",
             marginLeft: '5px',
             position: 'absolute',
-            left: '48px'
+            left: '48px',
         },
-        "&>img": {
+        '&>img': {
             position: 'absolute',
-            left: '10px'
+            left: '10px',
         },
-        "&:hover": {
-            opacity: '0.5'
+        '&:hover': {
+            opacity: '1',
+            color: '#9945ff',
         },
-        "&>svg": {
+        '&>svg': {
             position: 'absolute',
             right: '10px',
-            color: '#FFFAFA'
-        }
+            color: '#FFFAFA',
+        },
     },
     ActiveMenu: {
     },
